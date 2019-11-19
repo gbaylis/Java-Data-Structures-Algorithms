@@ -1,0 +1,51 @@
+// selection sort, coded on Nov. 18th 2019
+// created by gbaylis
+
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        int[] intArray = { -20, 35, -10, 0, 55, -30, 75};
+        
+        for (int lastUnsortedIndex = intArray.length -1; lastUnsortedIndex > 0;
+        lastUnsortedIndex--) {
+            
+            int largest = 0;
+
+// choose an int variable name , use of a for and if statement           
+            for (int a = 1; a<= lastUnsortedIndex; a++) {
+                if (intArray[a] > intArray[largest]) {
+                    largest = 1;
+                }
+            }
+            swap(intArray, largest, lastUnsortedIndex);
+        }
+
+// the for statement, increment the a by 1         
+        for (int a = 0; a < intArray.length; a++) {
+            System.out.println(intArray[a]);
+        }
+    }
+ // I choose to name my int variables a and b,    
+    public static void swap(int[] array, int a, int b) {
+        if (a == b) {
+            return;
+        }
+        
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
+}
+
+/*
+will print 
+-20
+-10
+0
+55
+-30
+75
+35
+*/
