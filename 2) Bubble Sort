@@ -1,0 +1,37 @@
+// bubble sort / created in Nov. 28th, 2019 by gbaylis
+public class Main {
+    
+    public static void main(String[] args) {
+        
+// an array of numbers, in no particular order     
+        int[] intArray = { 10, -5, 20, -35, 0, 30};
+        
+        for (int lastUnsortedIndex = intArray.length -1; lastUnsortedIndex > 0;
+        lastUnsortedIndex--) {
+            
+// I choose to name the int variable a, however use any letter you like    
+// in other examples, the int variable would be named i
+            for (int a = 0; a < lastUnsortedIndex; a++) {
+                if (intArray[a] > intArray[a + 1]) {
+                    swap(intArray, a, a + 1);
+                }
+            }
+        }
+        
+        for (int a = 0; a < intArray.length; a++) {
+            System.out.println(intArray[a]);
+// this program will list the             
+        }
+    }
+    
+    public static void swap(int[] array, int a, int b) {
+// I choose to name the 2nd int variable b      
+        if (a == b) {
+            return;
+        }
+        
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
+}
