@@ -1,0 +1,44 @@
+/*
+Recursion example
+created on Nov 29th, 2019
+by gbaylis
+*/
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+   // when practicing, change the int to get different results     
+        System.out.println(iterativeFactorial(4));
+        System.out.println(recursiveFactorial(4));
+    }
+    
+    public static int recursiveFactorial(int num) {
+        
+        if (num == 0) {
+            return 1;
+        }
+        
+        return num * recursiveFactorial(num - 1);
+    }
+    
+    public static int iterativeFactorial(int num) {
+        
+        if (num == 0) {
+            return 1;
+        }
+        
+        int factorial = 1;
+        for (int a = 1; a <= num; a++) {
+            factorial *= a;
+        }
+        
+        return factorial;
+    }
+}
+
+/*
+will print 
+24
+24
+*/
