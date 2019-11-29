@@ -1,0 +1,48 @@
+/*
+shell sort example
+created on Nov 29th, 2019
+by gbaylis
+*/
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+    // type an array with the numbers in random order    
+        int[] intArray = {1000, -35, 0, 17, -2, 86, 234};
+        
+        // create a for loop
+        for (int gap = intArray.length / 2; gap > 0; gap /= 2) {
+            
+            for (int a = gap; a < intArray.length; a++) {
+                
+        // there is one Element in this program, keep the name consistent        
+                int shellElement = intArray[a];
+                
+                int b = a;
+                
+                while (b >= gap && intArray[b - gap] > shellElement) {
+                    intArray[b] = intArray[b - gap];
+                    b -= gap;
+                }
+                
+                intArray[b] = shellElement;
+            }
+        }
+        
+        for (int a = 0; a < intArray.length; a++) {
+        // the numbers will print in the order from smallest to largest    
+            System.out.println(intArray[a]);
+        }
+    }
+}
+
+
+/*
+will print the numbers from smallest to largest
+0                                                                                                                                              
+17                                                                                                                                             
+86                                                                                                                                             
+234                                                                                                                                            
+1000
+*/
