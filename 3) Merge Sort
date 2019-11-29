@@ -1,0 +1,61 @@
+/*
+merge sort example
+created on Nov 29th, 2019
+by gbaylis
+*/
+
+public class Main {
+    
+    public static void main(String[] args) {
+        // create an array of numbers in no particular order
+        int[] intArray = { 699, -55, 1, 0, 25, -22};
+        
+        mergeSort(intArray, 0, intArray.length);
+        
+        for (int i = 0; i < intArray.length; i++) {
+        // tell the program to print the array    
+            System.out.println(intArray[i]);
+        }
+    }
+    
+    public static void mergeSort(int[] input, int start, int end) {
+        
+        if (end - start < 2) {
+            
+            return;
+        }
+        
+        int mid = (start + end) / 2;
+        mergeSort(input, start, mid);
+        mergeSort(input, mid, end);
+        merge(input, start, mid, end);
+    }
+    
+    public static void merge(int[] input, int start, int mid, int end) {
+        
+        if (input[mid - 1] <= input[mid]) {
+            return;
+        }
+        
+        int a = start;
+        int b = mid;
+        int tempIndex = 0;
+        
+        int[] temp = new int[end - start];
+        while (a < mid && b < end) {
+            temp[tempIndex++] = input[a] <= input[b] ? input[a++] : input[b++]; 
+        }
+        System.arraycopy(input, a , input, start + tempIndex, mid - a);
+        System.arraycopy(temp, 0, input, start, tempIndex);
+    }
+}
+
+
+/*
+will print the numbers from smallest to largest
+-22                                                                                                                                            
+0                                                                                                                                              
+1                                                                                                                                              
+25                                                                                                                                             
+699   
+*/
