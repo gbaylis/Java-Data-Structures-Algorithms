@@ -52,10 +52,6 @@ public class Main {
 
 
 /*
-will print the numbers from smallest to largest
--22                                                                                                                                            
-0                                                                                                                                              
-1                                                                                                                                              
-25                                                                                                                                             
-699   
+when typing this code, change the int in the array
+will print the numbers from smallest to largest 
 */
