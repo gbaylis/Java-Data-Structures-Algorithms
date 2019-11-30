@@ -35,3 +35,5 @@ public class Main {
         array[b] = temp;
     }
 }
+
+// when typing this example, change the int in the array, numbers will print from smallest to largest
