@@ -1,0 +1,56 @@
+/*
+7) Merge Sort  
+Created on Nov 29th, 2019
+by gbaylis
+tutorial example
+*/
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        int[] intArray = {20, -3, 0, 1, -55, 120};
+        
+        quickSort(intArray, 0, intArray.length);
+        
+        for (int a = 0; a < intArray.length; a++) {
+            System.out.println(intArray[a]);
+        }
+    }
+    
+    public static void quickSort(int[] input, int start, int end) {
+        if (end - start < 2) {
+            return;
+        }
+        
+        int pivotIndex = partition(input, start, end);
+        quickSort(input, start, pivotIndex);
+        for (int a = 0; a < input.length; a++) {
+            System.out.println(input[a]);
+        }
+        quickSort(input, pivotIndex + 1, end);
+    }
+    
+    public static int partition(int[] input, int start, int end) {
+        
+        int pivot = input[start];
+        int a = start;
+        int b = end;
+        
+        while (a < b) {
+            
+            while (a < b && input[--b] >= pivot);
+            if (a < b) {
+                input[a] = input[b];
+            }
+            
+            while (a < b && input[a++] <= pivot);
+            if (a < b) {
+                input[b] = input[a];
+            }
+        }
+        input[b] = pivot;
+        return b;
+    }
+}
+
+// type this on your own, change the int in the array to get different results
