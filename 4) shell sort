@@ -40,9 +40,5 @@ public class Main {
 
 /*
 will print the numbers from smallest to largest
-0                                                                                                                                              
-17                                                                                                                                             
-86                                                                                                                                             
-234                                                                                                                                            
-1000
+
 */
