@@ -1,0 +1,33 @@
+/*
+created on Nov 30th 2019
+by gbaylis
+Insertion Sort
+*/
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        // when typing this program, change the numbers in the array
+        int[] intArray = { 230, -44, 1, 101, -50, 0, 560 };
+        
+        for (int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length;
+        firstUnsortedIndex++) {
+            int insertionElement = intArray[firstUnsortedIndex];
+            
+            // create an int variable
+            int a;
+            
+            // for loop
+            for (a = firstUnsortedIndex; a > 0 && intArray[a - 1] > insertionElement; a--) {
+                intArray[a] = intArray[a - 1];
+            }
+            
+            intArray[a] = insertionElement;
+        }
+        
+        for (int a = 0; a < intArray.length; a++) {
+            // print the results, numbers will print from smallest to largest
+            System.out.println(intArray[a]);
+        }
+    }
+}
