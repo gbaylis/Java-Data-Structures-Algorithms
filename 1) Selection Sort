@@ -39,13 +39,4 @@ public class Main {
     }
 }
 
-/*
-will print 
--20
--10
-0
-55
--30
-75
-35
-*/
+// type this example, change the array to get different results, numbers will be printed from smallest to largest
