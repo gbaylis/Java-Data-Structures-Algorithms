@@ -38,9 +38,6 @@ public class Main {
 }
 
 /*
-will print 
-24
-24
 
 below is the formula that helps explain recursion
 1! = 1 * 0! = 1
