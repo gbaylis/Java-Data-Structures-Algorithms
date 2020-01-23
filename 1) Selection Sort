@@ -35,7 +35,7 @@ public class Main {
         
         int temp = array[a];
         array[a] = array[b];
-        array[b] = temp;
+        array[b] = temp;  
     }
 }
 
