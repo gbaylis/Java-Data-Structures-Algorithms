@@ -49,3 +49,4 @@ public class Main {
         return value / (int) Math.pow(radix, position) % radix;
     }
 }
+
