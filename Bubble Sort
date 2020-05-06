@@ -1,4 +1,4 @@
-// bubble sort / created in Nov. 28th, 2019 by gbaylis
+// bubble sort | gbaylis
 public class Main {
     
     public static void main(String[] args) {
