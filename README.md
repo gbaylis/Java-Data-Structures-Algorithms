@@ -1,3 +1,3 @@
-# Java-Data-Structures-Algorithms
-examples of Java Data Structurs and algorithms
+# Java-Sorting-Algorithms
+examples of Soting algorithms in Java
 
