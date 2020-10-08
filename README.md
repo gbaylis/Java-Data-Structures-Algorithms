@@ -1,3 +1,3 @@
 # Java-Sorting-Algorithms
-examples of Soting algorithms in Java
+examples of Sorting algorithms in Java
 
